@@ -1,0 +1,101 @@
+.header-page {
+  padding: 1rem 0;
+  background: $light;
+  @include minWidth(1200px) {
+    padding: 0.5rem 0;
+  }
+  a {
+    color: $gray-01;
+    font-size: 1rem;
+    line-height: 130%;
+    &:hover {
+      path {
+        fill: $main-04;
+      }
+    }
+  }
+
+  path {
+    fill: $gray-01;
+  }
+
+  .btn {
+    color: $light;
+  }
+
+  .btn-hamburger {
+    span {
+      background: $gray-01;
+    }
+  }
+
+  .list-menu {
+    li {
+      &:last-child {
+        a, .menu-popup {
+          padding-right: 0;
+        }
+      }
+    }
+    a, .menu-popup {
+      padding: 16px 32px;
+      font-weight: 700;
+      display: flex;
+      &.active-link,
+      &:hover {
+        color: $main-04;
+      }
+    }
+  }
+
+  .box-search {
+    margin-bottom: 0;
+    @include minWidth(1200px) {
+      margin-right: 2.5rem;
+      margin-left: 2rem;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      @include minWidth(992px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &.bg-light {
+    .logo {
+      background: url(../images/logoNWS-blue.svg) no-repeat;
+      background-size: contain;
+    }
+    a {
+      color: $gray-01;
+      &:hover {
+        color: $main-04;
+        &::before {
+          background: $main-04;
+        }
+
+        path {
+          fill: $main-04;
+        }
+      }
+    }
+
+    .btn {
+      color: $light;
+    }
+
+    path {
+      fill: $gray-01;
+    }
+
+    .btn-hamburger {
+      span {
+        background: $gray-01;
+      }
+    }
+  }
+}

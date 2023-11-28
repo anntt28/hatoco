@@ -1,0 +1,26 @@
+.footer-page {
+  background: url('../images/bg-footer.jpg');
+  color: $light;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include minWidth(1200px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  h2
+  {
+    margin-bottom: 1rem;
+  }
+  a {
+    color: $light;
+  }
+  p{
+    max-width: 51rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    @include minWidth(480px) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
