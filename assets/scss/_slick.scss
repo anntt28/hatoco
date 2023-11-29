@@ -18,15 +18,15 @@
 }
 
 .swiper-pagination-bullet {
-  background: #dadee2;
+  background: #D9D9D9;
   opacity: 1;
-  border-radius: 0;
-  width: 10px;
-  height: 10px;
+  border-radius: 20px;
+  width: 29px;
+  height: 7px;
 }
 
 .swiper-pagination-bullet-active {
-  background: #01c0ea;
+  background: #8DC540;
 }
 .swiper-button {
   opacity: 0;
@@ -62,8 +62,8 @@
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08); 
   border-radius: 100%;
   @include minWidth(480px) {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
   }
 
 }

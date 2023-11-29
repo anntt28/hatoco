@@ -1,4 +1,58 @@
 $(function () {
+  var swiper2 = new Swiper(".product-category-h .slider-tab-p", {
+    loop: true,
+    slidesPerView: 7,
+    spaceBetween: 1,
+    freeMode: true,
+    watchSlidesProgress: true,
+    spaceBetween:10,
+    navigation: {
+      nextEl: ".swiper-button-next-1",
+      prevEl: ".swiper-button-prev-1"
+    },
+  });
+  var swiper3 = new Swiper(".product-category-h .slider-product-p", {
+    loop: true,
+    slidesPerView: 5,
+    spaceBetween:24,
+    navigation: {
+      nextEl: ".swiper-button-next-2",
+      prevEl: ".swiper-button-prev-2"
+    },
+    thumbs: {
+      swiper: swiper2,
+    },
+  });
+  var swiper4 = new Swiper(".slider-review-customer", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween:30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+  });
+  var swiper5 = new Swiper(".slider-blog-news", {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween:30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+  });
+  var swiper6 = new Swiper(".product-hataco-slider", {
+        initialSlide: 3,
+        cssMode: false,
+        paginationClickable: true,
+        slidesPerView: 6,
+                spaceBetween: 50,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+  });
   $('#select-tab-topic').select2(
     {
       placeholder: "Chủ đề",
@@ -245,39 +299,3 @@ $(function () {
       // "endDate": target.attr('end-date'),
   });
 })
-const germanMapping = {
-  'Su': 'CN',
-  'Mo': 'T2',
-  'Tu': 'T3',
-  'We': 'T4',
-  'Th': 'T5',
-  'Fr': 'T6',
-  'Sa': 'T7',
-
-  'January': 'Tháng Một',
-  'February': 'Tháng Hai',
-  'March': 'Tháng Ba',
-  'April': 'Tháng Tư',
-  'May': 'Tháng Năm',
-  'June': 'Tháng Sáu',
-  'July': 'Tháng Bảy',
-  'August': 'Tháng Tám',
-  'September': 'Tháng Chín',
-  'October': 'Tháng Mười',
-  'November': 'Tháng Mười Một',
-  'December': 'Tháng Mười Hai',
-
-  "Apply": "Xác Nhận",
-  "Cancel": "Đặt lại"
-}
-const tc = (val) => germanMapping[val]
-$('.daterange-r-mon').attr('placeholder', 'Tháng');
-$('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
-  $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-  $(this).parent(".filter-calendar-result-qa").removeClass("arrow");
-});
-$('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
-  $(this).val('');
-  $(this).parent(".filter-calendar-result-qa").removeClass("active");
-  $(this).parent(".filter-calendar-result-qa").addClass("arrow")
-});

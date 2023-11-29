@@ -1,26 +1,87 @@
-.footer-page {
-  background: url('../images/bg-footer.jpg');
-  color: $light;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  @include minWidth(1200px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  h2
-  {
-    margin-bottom: 1rem;
-  }
-  a {
+.receive-incentives{
+  background-image: url(/assets/images/bg-form.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  .text{
+    text-align: center;
     color: $light;
+    h4{
+      color: #FFF;
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase; 
+    }
+    p{
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.48px; 
+      margin-bottom: 0;
+    }
   }
-  p{
-    max-width: 51rem;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    @include minWidth(480px) {
-      margin-bottom: 3rem;
+  .form-discount{
+    form{
+      position: relative;
+    }
+    label{
+      width: 100%;
+    }
+    .wpcf7-email{
+      border-radius: 50px;
+      background: #FFF;
+      border: none;
+      height: 45px;
+      width: 100%;
+      padding: 12px 27px;
+      outline: none;
+    }
+    .wpcf7-submit{
+      position: absolute;
+      right: 19px;
+      top: 46%;
+      background-color: transparent;
+      text-indent: -9999px;
+      background-image: url(/assets/images/ic-plane.svg);
+      height: 26px;
+      width: 26px;
+      white-space: nowrap;
+      border: none;
+      transform: translateY(-50%);
     }
   }
 }
-
+.footer-middle{
+  padding-top: 58px;
+  .info-company-ft{
+    .logo{
+      margin-bottom: 24px;
+    }
+    .info{
+      h5{
+        color: $primary;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 29px; 
+        text-transform: uppercase; 
+      }
+      p{
+        color: #404040;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 35px;
+        margin-bottom: 0;
+        svg{
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+  .maps{
+    iframe{
+      border-radius: 20px;
+    }
+  }
+}
