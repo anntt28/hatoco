@@ -3,7 +3,27 @@
     box-shadow: none;
   }
 }
-
+.btn-linear-rounded{
+  border-radius: 50px;
+  background: linear-gradient(71deg, #0D6C42 0%, #8DC540 100%); 
+}
+.btn-border-rounded{
+  border-radius: 50px;
+  border: 2px solid #5B9E47;
+  background: #FFF; 
+  color: #5B9E47;
+  padding: 5px 15px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s;
+  svg{
+    margin-left: 4px;
+  }
+  &:hover{
+    color: #5B9E47;
+    opacity: 0.5;
+  }
+}
 .btn-hamburger {
   width: 24px;
   height: 10px;

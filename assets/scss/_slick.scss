@@ -42,7 +42,7 @@
   }
 
   &:hover {
-    background: $main-04;
+    background: $gray-03;
     &::after {
       color: $light;
     }
@@ -74,7 +74,7 @@
     left: -15px;
   }
   @include minWidth(820px) {
-    left: -25px;
+    left: -55px;
   }
 }
 .swiper-button-next
@@ -84,7 +84,7 @@
     right: -15px;
   }
   @include minWidth(820px) {
-    right: -25px;
+    right: -55px;
   }
 }
 .swiper-button-next,

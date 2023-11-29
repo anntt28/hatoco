@@ -1,6 +1,4 @@
-.bg-primary-light {
-  background-color: $primary-light;
-}
+
 
 .bg-light-o2 {
   background-color: rgba($color: $light, $alpha: 0.2) !important;
@@ -10,15 +8,6 @@
   background-color: rgba($color: $primary, $alpha: 0.2) !important;
 }
 
-.bg-secondary-light {
-  background-color: $secondary-light !important;
-}
-
-.hover-primary-light {
-  &:hover {
-    background-color: rgba($color: $primary, $alpha: 0.2) !important;
-  }
-}
 
 .bg-gradient-slide {
   background: linear-gradient(

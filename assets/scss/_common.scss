@@ -15,18 +15,13 @@ html {
 }
 
 body {
-  font-family: "Bai Jamjuree", sans-serif;
-  color: $gray-01;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: $grey-1;
 }
 
-.color-main-04 {
-  color: $main-04 !important;
-}
+
 .bg-8378F7 {
   background-color: #8378f7 !important;
-}
-.bg-00C7F2 {
-  background-color: $main-04 !important;
 }
 .bg-FFB82E {
   background-color: #ffb82e !important;
@@ -49,9 +44,9 @@ body {
     padding: 0 60px;
   }
   @include minWidth(1440px) {
-    padding: 0 120px;
+    padding: 0;
   }
-  max-width: 1440px;
+  max-width: 1300px;
   @include trans;
 }
 
@@ -178,8 +173,8 @@ li {
 }
 
 .logo {
-  width: 124px;
-  height: 2rem;
+  width: 199px;
+  height: 7.188rem;
 }
 
 h1 {
@@ -194,30 +189,14 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: 28px;
-  line-height: 120%;
-  text-align: center;
+  font-size: 24px;
+  line-height: 33px;
   @include minWidth(1200px) {
-    font-size: 52px;
+    font-size: 35px;
   }
 }
 
-.btn-outline-primary {
-  border: 1px solid rgba(160, 214, 255, 0.5);
-  color: $main-04;
-  &:hover,
-  &:focus {
-    background: rgba(160, 214, 255, 0.2);
-    border-color: rgba(160, 214, 255, 0.2);
-    color: $main-04;
-  }
-}
 
-.btn-light {
-  background: $light;
-  border-color: $light;
-  color: $main-04;
-}
 
 textarea {
   resize: none;
@@ -261,25 +240,23 @@ textarea {
     font-size: 2rem;
     font-weight: 700;
     line-height: 120%;
-    color: $main-02;
+    color: $primary;
     margin-bottom: 2rem;
   }
 
   label {
     font-size: 16px;
     line-height: 150%;
-    color: $main-04;
+    color: $grey-4;
     margin-bottom: 8px;
     span {
-      color: $sub-main-error;
+      color: $grey-1;
     }
   }
 
   input {
     border-radius: 8px;
     outline: none;
-    background: $main-06;
-    border-color: $main-06;
     height: 50px;
     padding: 0.875rem 1rem;
     &:focus {
@@ -360,7 +337,7 @@ textarea {
     }
 
     .select2-selection__placeholder {
-      color: $gray-01;
+      color: $grey-1;
       font-size: 16px;
       font-weight: 600;
       line-height: 130%;
@@ -390,13 +367,13 @@ textarea {
 
   /* Handle */
   .select2-dropdown ::-webkit-scrollbar-thumb {
-    background: $gray-01;
+    background: $grey-1;
     border-radius: 10px;
   }
 
   /* Handle on hover */
   .select2-dropdown ::-webkit-scrollbar-thumb:hover {
-    background: $gray-01;
+    background: $grey-1;
   }
 
   .select2-results__option {
@@ -417,54 +394,6 @@ textarea {
   }
   @include minWidth(1200px) {
     max-width: 1100px;
-  }
-}
-
-.box__guide {
-  margin-top: 1.5rem;
-  .item {
-    border-radius: 1.5rem;
-    background: $light;
-    box-shadow: 0px 4px 1.5rem 0px rgba(93, 118, 168, 0.08);
-    padding: 16px;
-    color: $main-02;
-    cursor: pointer;
-    &:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
-
-    .text {
-      font-size: 1.5rem;
-      font-weight: 700;
-      line-height: 120%; /* 38.4px */
-      @include minWidth(992px) {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 120%;
-      }
-    }
-  }
-
-  .image-icon {
-    width: 4rem;
-    height: 4rem;
-    flex-shrink: 0;
-    margin-right: 1rem;
-    @include minWidth(992px) {
-      width: 5rem;
-      height: 5rem;
-      margin-right: 2rem;
-    }
-  }
-
-  .icon-arrow {
-    width: 3rem;
-    height: 3rem;
-    flex-shrink: 0;
-    @include minWidth(992px) {
-      width: 4rem;
-      height: 4rem;
-    }
   }
 }
 
@@ -535,7 +464,7 @@ textarea {
   }
 
   h2 {
-    color: $main-02;
+    color: $primary;
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
@@ -559,7 +488,7 @@ textarea {
       font-weight: 400;
       line-height: 150%;
       margin-bottom: 0;
-      color: $gray-01;
+      color: $grey-1;
     }
   }
 }
@@ -575,49 +504,11 @@ textarea {
     margin-bottom: 30px;
   }
 }
-
-.file-upload {
-  border-radius: 4px;
-  border: 1px dashed $gray-03;
-  height: 72px;
-  position: relative;
-  cursor: pointer;
-  .file-select-button {
-    border-radius: 2px;
-    background: $main-04;
-    color: $light;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: 0.7px;
-    padding: 10px 20px;
-    width: max-content;
-    cursor: pointer;
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    @include minWidth(992px) {
-      padding: 10px 40px;
-      right: 1.5rem;
-    }
-  }
-
-  .file-select-name {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    @include minWidth(768px) {
-      left: 1.5rem;
-    }
-  }
-
-  input {
-    opacity: 0;
-    position: absolute;
-    inset: 0;
-    height: auto;
+.heading-hataco{
+  p{
+    max-width: 927px;
+    margin: 0 auto;
+    font-weight: 300; 
+    color: $grey-light;
   }
 }

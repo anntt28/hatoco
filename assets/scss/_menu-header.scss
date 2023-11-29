@@ -1,100 +1,108 @@
-.header-page {
-  padding: 1rem 0;
-  background: $light;
-  @include minWidth(1200px) {
-    padding: 0.5rem 0;
+.header-top{
+  background-color: $green-light;
+  padding: 7px 0;
+  .text{
+    font-weight: 500;
   }
-  a {
-    color: $gray-01;
-    font-size: 1rem;
-    line-height: 130%;
-    &:hover {
-      path {
-        fill: $main-04;
-      }
-    }
-  }
-
-  path {
-    fill: $gray-01;
-  }
-
-  .btn {
-    color: $light;
-  }
-
-  .btn-hamburger {
-    span {
-      background: $gray-01;
-    }
-  }
-
-  .list-menu {
-    li {
-      &:last-child {
-        a, .menu-popup {
-          padding-right: 0;
-        }
-      }
-    }
-    a, .menu-popup {
-      padding: 16px 32px;
-      font-weight: 700;
+  .user-f{
+    li{
+      position: relative;
+      padding: 0 12px;
       display: flex;
-      &.active-link,
-      &:hover {
-        color: $main-04;
+      align-items: center;
+      &:first-child{
+        padding-left: 0;
+      }
+      &:not(:last-child){
+        &::after{
+          content: '|';
+          color: $green-2;
+          position: absolute;
+          right: -4px;
+        }
+      }
+      svg{
+        margin-right: 6px;
+      }
+      span{
+        font-size: 0.938rem;
+        color: $grey-7;
+        letter-spacing: -0.45px; 
+        font-weight: 400;
       }
     }
   }
-
-  .box-search {
-    margin-bottom: 0;
-    @include minWidth(1200px) {
-      margin-right: 2.5rem;
-      margin-left: 2rem;
-    }
-    svg {
-      width: 16px;
-      height: 16px;
-      cursor: pointer;
-      @include minWidth(992px) {
-        width: 32px;
-        height: 32px;
+  .social-f{
+    li{
+      &:not(:last-child){
+        margin-right: 6px;
       }
     }
   }
-
-  &.bg-light {
-    .logo {
-      background: url(../images/logoNWS-blue.svg) no-repeat;
-      background-size: contain;
+}
+.header-middle{
+  padding: 15px 0 21px;
+  .search-product{
+    position: relative;
+    input{
+      width: 549px;
+      height: 45px; 
+      border-radius: 50px;
+      border: 1px solid $grey-border;
+      background: $light; 
+      padding: 12px 24px;
+      outline: none;
     }
-    a {
-      color: $gray-01;
-      &:hover {
-        color: $main-04;
-        &::before {
-          background: $main-04;
+    .btn-search{
+      width: 76px; 
+      border: none;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      transition: all 0.3s;
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+  .contact{
+    .list-icon{
+      .item{
+        margin-right: 12px;
+      }
+    }
+    .cart{
+      svg{
+        transform: scale(1.11);
+      }
+    }
+    .call{
+      svg{
+        path{
+          fill: $primary;
+          &:first-of-type{
+            stroke: $primary;
+            fill: $light;
+          }
         }
-
-        path {
-          fill: $main-04;
+        circle{
+          stroke: $primary;
         }
       }
     }
-
-    .btn {
-      color: $light;
-    }
-
-    path {
-      fill: $gray-01;
-    }
-
-    .btn-hamburger {
-      span {
-        background: $gray-01;
+    .text{
+      p{
+        color:$primary;
+        font-weight: 600; 
+        margin-bottom: 0;
+        line-height: 1.4;
+      }
+      .tel{
+        font-size: 1.375rem;
+        letter-spacing: 2.2px; 
+        font-weight: 600;
+        line-height: 1.1;
+        color: $red-2;
       }
     }
   }
