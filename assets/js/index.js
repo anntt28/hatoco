@@ -1,19 +1,22 @@
 $(function () {
   var swiper2 = new Swiper(".product-category-h .slider-tab-p", {
     loop: true,
+    loopedSlides: 1,
     slidesPerView: 7,
+    slidesPerGroup: 1,
     spaceBetween: 1,
     freeMode: true,
     watchSlidesProgress: true,
     spaceBetween:10,
+    slideToClickedSlide: true,
     navigation: {
       nextEl: ".swiper-button-next-1",
       prevEl: ".swiper-button-prev-1"
     },
   });
   var swiper3 = new Swiper(".product-category-h .slider-product-p", {
-    loop: true,
-    slidesPerView: 5,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween:24,
     navigation: {
       nextEl: ".swiper-button-next-2",
@@ -53,20 +56,6 @@ $(function () {
     },
     
   });
-  $('#select-tab-topic').select2(
-    {
-      placeholder: "Chủ đề",
-      minimumResultsForSearch: -1,
-      dropdownParent: $('.filter-item-qa-result-1'),
-    }
-  );
-  $('#select-tab-topic-2').select2(
-    {
-      placeholder: "Chủ đề",
-      minimumResultsForSearch: -1,
-      dropdownParent: $('.filter-item-qa-result-3'),
-    }
-  );
   $(".menu-item-has-children")
     .on("mouseover", function () {
       $(this).children('.sub-menu').addClass('active')
@@ -152,150 +141,3 @@ $(function () {
         }
     });
 });
-(function() {
-
-  'use strict';
-
-  // breakpoint where swiper will be destroyed
-  // and switches to a dual-column layout
-  const breakpoint = window.matchMedia( '(min-width:992px)' );
-
-  // keep track of swiper instances to destroy later
-  let mySwiper;
-
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-
-  const breakpointChecker = function() {
-
-    // if larger viewport and multi-row layout needed
-    if ( breakpoint.matches === true ) {
-
-      // clean up old instances and inline styles when available
-	  if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
-
-
-	  // or/and do nothing
-	  return;
-
-      // else if a small viewport and single column layout needed
-      } else if ( breakpoint.matches === false ) {
-
-        // fire small viewport version of swiper
-        return enableSwiper();
-
-      }
-  };
-
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-
-  const enableSwiper = function() {
-
-    mySwiper = new Swiper ('.list-concepts-main', {
-
-      loop: true,
-      slidesPerView: 1,
-      centeredSlides: true,
-      a11y: true,
-      keyboardControl: true,
-      grabCursor: true,
-      spaceBetween: 16,
-      // pagination
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        480: {
-          slidesPerView: 3,
-        }
-      }
-
-    });
-
-  };
-
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-
-  // keep an eye on viewport size changes
-  breakpoint.addListener(breakpointChecker);
-
-  // kickstart
-  breakpointChecker();
-
-
-
-})(); /* IIFE end */
-(function() {
-
-  mySwiper = new Swiper ('.list-concepts-popup', {
-
-      loop: true,
-      slidesPerView: 1,
-      centeredSlides: false,
-      a11y: true,
-      keyboardControl: true,
-      grabCursor: true,
-      spaceBetween: 16,
-      // pagination
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        480: {
-          slidesPerView: 3,
-        }
-      }
-
-    });
-})(); /* IIFE end */
-$(".filter-calendar-result-qa").on('click', function(){
-  $(this).addClass("active");
-});
-$(function () {
-
-  // update locale to de and customize the MMM, MMMM translation
-  moment.updateLocale("de", {
-      months : ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
-      monthsShort : ['Jan', 'Feb', 'März', 'Apr', 'Mai', 'Juni', 'Juli', 'Aug', 'Sept', 'Okt', 'Nov', 'Dez']
-  });
-  $('input[name="daterange"]').daterangepicker({
-      "opens": "center",
-      "maxSpan": {
-          "days": 366
-      },
-      autoUpdateInput: false,
-      "parentEl":".card-result-qa-header",
-      locale: {
-          cancelLabel: 'Clear',
-          applyLabel: tc('Apply'),
-          customRangeLabel: tc('Custom Range'),
-          daysOfWeek: [
-              tc('Su'), tc('Mo'), tc('Tu'), tc('We'), tc('Th'), tc('Fr'), tc('Sa')
-          ],
-          monthNames: [
-              tc('January'), tc('February'), tc('March'), tc('April'), tc('May'), tc('June'), 
-              tc('July'), tc('August'), tc('September'), tc('October'), tc('November'), tc('December')
-          ],
-          firstDay: 1
-      },
-      // ranges: ranges_locale(currentLanguage),
-      "alwaysShowCalendars": true,
-      // "startDate": today, //target.attr('start-date'),
-      // "endDate": target.attr('end-date'),
-  });
-})

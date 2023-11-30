@@ -43,9 +43,11 @@ main{
     }
     .swiper-button-prev{
         top: 37%;
+        box-shadow: none;
     }
     .swiper-button-next{
         top: 37%;
+        box-shadow: none;
     }
 }
 .product-hataco-slider{
@@ -99,6 +101,11 @@ main{
 .list-product-best-seller{
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap:30px;
+}
+.list-item-product-t{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     column-gap:30px;
 }
 .item-best-seller{
@@ -158,8 +165,9 @@ main{
                     padding: 6px 0;
                     text-align: center;
                     border-right: 1px solid #D9D9D9;
+                    cursor: pointer;
                 }
-                &.swiper-slide-active{
+                &.swiper-slide-thumb-active{
                     .item-tab{
                         color: $light;
                         border-radius: 50px;
@@ -368,6 +376,11 @@ main{
             text-transform: lowercase;
             margin-bottom: 8px; 
         }
+    }
+}
+.mySwiper{
+    .swiper-slide-thumb-active{
+        background-color: red;
     }
 }
 .item-blog-list{
