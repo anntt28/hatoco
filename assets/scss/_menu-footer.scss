@@ -10,16 +10,23 @@
     color: $light;
     h4{
       color: #FFF;
-      font-size: 30px;
+      font-size: 22px;
       font-weight: 700;
       text-transform: uppercase; 
+      @include minWidth(768px){
+        font-size: 30px;
+      }
     }
     p{
       color: #FFF;
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 400;
       letter-spacing: -0.48px; 
       margin-bottom: 0;
+      @include minWidth(768px){
+        font-size: 16px;
+        font-weight: 600;
+      }
     }
   }
   .form-discount{
@@ -55,13 +62,24 @@
 }
 .footer-middle{
   padding-top: 58px;
-  padding-bottom: 54px;
+  padding-bottom: 0px;
+  @include minWidth(768px){
+    padding-bottom: 54px;
+  }
   a{
     &:hover{
       color: $primary;
     }
   }
   .info-company-ft{
+    border-bottom:  1px solid #DFDFDF;
+    padding-bottom: 21px;
+    margin-bottom: 29px;
+    @include minWidth(768px){
+      border-bottom:  0px solid #DFDFDF;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
     .logo{
       margin-bottom: 24px;
     }
@@ -112,6 +130,10 @@
       background-color: #CFCFCF;
       height: 1px;
       position: relative;
+      width: 70%;
+      @include minWidth(768px){
+        width: 100%;
+      }
       &::after{
         content: '';
         background-color: #8DC540;
@@ -135,6 +157,14 @@
     }
   }
   .maps{
+    border-top: 1px solid #DFDFDF;
+    padding-top: 34px;
+    margin-top: 16px;
+    @include minWidth(768px){
+      border-top: 0px solid #DFDFDF;
+      padding-top: 0;
+      margin-top: 0;
+    }
     iframe{
       border-radius: 20px;
       width: 100%;
@@ -144,7 +174,9 @@
 }
 .footer-bottom{
   padding: 27px 0;
-  border-top: 1px solid #DFDFDF;
+  @include minWidth(768px){
+    border-top: 1px solid #DFDFDF;
+  }
   .text{
     color: #868686;
     font-size: 16px;

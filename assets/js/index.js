@@ -44,8 +44,12 @@ $(function () {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next-4",
+    prevEl: ".swiper-button-prev-4",
+  },
   pagination: {
-   el: ".swiper-pagination",
+   el: ".swiper-pagination-1",
    clickable: true,
   },
   breakpoints: {
@@ -61,11 +65,13 @@ $(function () {
  });
  var swiper5 = new Swiper(".slider-blog-news", {
   loop: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 30,
-  pagination: {
-   el: ".swiper-pagination",
-   clickable: true,
+  breakpoints: {
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+    },
   },
  });
  var swiper6 = new Swiper(".product-hataco-slider", {
@@ -85,7 +91,7 @@ $(function () {
     },
   },
  });
- var swiper7 = new Swiper(".slider-video-hataco", {
+ var swiper7 = new Swiper(".slider-video-hataco-pc", {
   initialSlide: 3,
   cssMode: false,
   paginationClickable: true,
@@ -95,6 +101,27 @@ $(function () {
    nextEl: ".swiper-button-next-3",
    prevEl: ".swiper-button-prev-3",
   }
+ });
+ var swiper8 = new Swiper(".slider-thumb-video", {
+  loop:true,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  freeMode: true,
+  watchSlidesProgress: true,
+  spaceBetween: 10,
+  slideToClickedSlide: true,
+  navigation: {
+   nextEl: ".swiper-button-next-5",
+   prevEl: ".swiper-button-prev-5",
+  }
+ });
+ var swiper9 = new Swiper(".slider-video-hataco-mobile", {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 10,
+  thumbs: {
+   swiper: swiper8,
+  },
  });
  $(".menu-item-has-children")
   .on("mouseover", function () {

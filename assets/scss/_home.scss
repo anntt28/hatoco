@@ -119,12 +119,9 @@ main{
                     background: linear-gradient(to right, #5B9E47, #D2EAB0);
                 }
             }
-            h4{
-                padding-top: 0;
-            }
         }
         h4{
-            padding-top: 15px;
+            padding-top: 0px;
             color: $primary;
             font-size: 1rem;
             text-align: center;
@@ -132,7 +129,10 @@ main{
             line-height: 27px;
             text-transform: uppercase; 
             max-width: 101px;
-            margin: 0 auto
+            margin: 0 auto;
+            @include minWidth(480px){
+                padding-top: 15px;
+            }
         }
     }
     
@@ -142,6 +142,12 @@ main{
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap:10px;
     margin-bottom: 22px;
+    .image-cover-h{
+        padding-top: 95%;
+        @include minWidth(768px){
+            padding-top: 96%;
+        }
+    }
     @include minWidth(768px){
         grid-template-columns: repeat(4, minmax(0, 1fr));
         column-gap:30px;
@@ -151,8 +157,8 @@ main{
 .list-item-product-t{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap:30px;
-    @include minWidth(768px){
+    column-gap:10px;
+    @include minWidth(1400px){
         grid-template-columns: repeat(5, minmax(0, 1fr));
         column-gap:30px;
     }
@@ -162,7 +168,22 @@ main{
             @include minWidth(768px){
                 display: block;
             }
-            
+        }
+        h4{
+            font-size: 14px;
+            @include minWidth(768px){
+                font-size: 17px;
+            }
+        }
+        .info{
+            .price{
+                .sale{
+                    line-height: 20px;
+                }
+                .cost{
+                    line-height: 20px;
+                }
+            }
         }
     }
 }
@@ -175,8 +196,11 @@ main{
         margin-top: 30px;
     }
     .info{
-        padding: 21px 32px 32px;
+        padding: 5px 5px 18px;
         text-align: center;
+        @include minWidth(768px){
+            padding: 21px 32px 32px;
+        }
         h4{
             color: #333;
             max-width: 238px;
@@ -195,6 +219,10 @@ main{
         .price{
             justify-content: space-between;
             margin-bottom: 11px;
+            flex-direction: column;
+            @include minWidth(768px){
+                flex-direction:row;
+            }
             .sale{
                 color: #F54343;
                 font-size: 16px;
@@ -220,24 +248,37 @@ main{
         }
         .btn-linear-rounded{
             color: $light;
-            padding: 6px 18px;
+            padding: 6px 10px;
+            font-size: 13px;
+            @include minWidth(768px){
+                font-size: 16px;
+                padding: 6px 18px;
+            }
         }
     }
 }
 .product-category-h{
     .slider-thumb{
         position: relative;
-        margin-bottom: 38px;
+        margin-bottom: 22px;
+        padding: 0 20px;
+        @include minWidth(768px){
+            padding: 0;
+            margin-bottom: 38px;
+        }
         .slider-tab-p{
             border-radius: 50px; 
             border: 1px solid #D1D1D1; 
             padding: 8px;
             .swiper-slide{
                 .item-tab{
-                    padding: 6px 0;
+                    padding: 2px 0;
                     text-align: center;
                     border-right: 1px solid #D9D9D9;
                     cursor: pointer;
+                    @include minWidth(768px){
+                        padding: 6px 0;
+                    }
                 }
                 &.swiper-slide-thumb-active{
                     .item-tab{
@@ -265,6 +306,12 @@ main{
             box-shadow: none;
             top: 50%;
             transform: translateY(10px);
+            svg{
+                width: 13px;
+                @include minWidth(768px){
+                    width: 21px;
+                }
+            }
         }
     }
     .slider-main-p{
@@ -272,17 +319,40 @@ main{
         .swiper-button-prev,
         .swiper-button-next{
             box-shadow: none;
+            background-color: transparent;
+            svg{
+                width: 26px;
+                @include minWidth(768px){
+                    width: 40px;
+                }
+            }
         }
+        .swiper-pagination{
+            margin-top: 18px;
+        }
+        .swiper-pagination-bullet{
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+        }    
     }
     .slider-product-p {
         padding: 6px;
         position: relative;
         .item-best-seller{
             margin-top: 0;
-        }        
+        }    
     }
 }
 .why-choose-me{
+    .heading-hataco{
+        p{
+            color: #505050; 
+            font-size: 15px;
+            line-height: 27px;
+            margin-bottom: 30px;
+        }
+    }
     .content-why-choose-me{
         .intro{
             flex: 2;
@@ -316,7 +386,10 @@ main{
         }
         .f-1{
             position: relative;
-            padding-right: 60px;
+            padding-right: 29px;
+            @include minWidth(768px){
+                padding-right: 60px;
+            }
             &::after{
                 content: url("/assets/images/line-2.png");
                 position: absolute;
@@ -326,23 +399,43 @@ main{
         }
         .feature{
             flex: 1;
-            padding-left: 60px;
+            padding-left: 0px;
+            &.f-2{
+                padding-left: 18px;
+                @include minWidth(768px){
+                    padding-left: 60px;
+                }
+            }
+            @include minWidth(768px){
+                padding-left: 60px;
+            }
             .title{
                 margin-bottom: 14px;
+                flex-direction: column;
+                @include minWidth(768px){
+                    flex-direction: row;
+                }
                 h5{
                     margin-left: 14px;
                     color: #0D6C42;
-                    font-size: 24px;
+                    font-size: 20px;
                     font-weight: 600;
-                    line-height: 29px
+                    line-height: 29px;
+                    @include minWidth(768px){
+                        font-size: 24px;
+                    }
                 }
             }
             p{
                 color: #3A3A3A;
-                text-align: justify;
-                font-size: 17px;
+                text-align: center;
+                font-size: 15px;
                 font-weight: 400;
                 line-height: 29px;
+                @include minWidth(768px){
+                    font-size: 17px;
+                    text-align: justify;
+                }
             }
         }
     }
@@ -352,8 +445,12 @@ main{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 124px;
-    padding-bottom: 124px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    @include minWidth(768px){
+        padding-top: 124px;
+        padding-bottom: 124px;
+    }
     .heading-hataco{
         color: $light;
         margin-bottom: 35px;
@@ -362,6 +459,11 @@ main{
         }
     }
     .box-slide{
+        padding: 0 14px;
+        position: relative;
+        @include minWidth(768px){
+            padding: 0;
+        }
         .swiper-pagination-bullet{
             margin-top: 35px;
         }
@@ -373,6 +475,9 @@ main{
     position: relative;
     text-align: center;
     padding: 37px;
+    h5{
+        color: $primary;
+    }
     .img{
         width: 102px;
         height: 102px;
@@ -407,19 +512,39 @@ main{
     }
 }
 .blog-news{
-    margin-bottom: 119px;
+    margin-bottom: 49px;
+    @include minWidth(768px){
+        margin-bottom: 119px;
+    }
+    .heading-hataco{
+        margin-bottom: 11px;
+        @include minWidth(1024px){
+            margin-bottom: 24px;
+        }
+    }
     .blog-content{
-        display: flex;
         .box-slider{
-            width: 69.5%;
-            padding-right: 31px;
+            margin-bottom: 20px;
+            @include minWidth(1024px){
+                width: 69.5%;
+                padding-right: 31px;
+                margin-bottom: 0;
+            }
         }
         .blog-list{
-            width: 310.5;
+            @include minWidth(1024px){
+                width: 31.5%;
+            }
         }
     }
     .slider-blog-news{
         padding: 6px;
+        .box-image{
+            padding-top: 72%;
+            @include minWidth(768px){
+                padding-top: 71%;
+            }
+        }
     }
 }
 .item-blog-new{
@@ -463,7 +588,9 @@ main{
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
     margin-bottom: 24px;
     .box-image{
-        width: 41%;
+        width: 164px;
+        padding-top: 10%;
+        border-radius: 20px 20px 0 0;
         img{
             object-fit: cover;
             width: 100%;
@@ -496,10 +623,38 @@ main{
 .content-video-hataco{
     position: relative;
 }
+.content-video-hataco-mobile{
+    .slide-main-video{
+        position: relative;
+    }
+    .slider-thumb-video {
+        margin-top: 13px;
+        position: relative;
+        .image-cover-h{
+            padding-top: 67%;
+        }
+        .img{
+            &::after{
+                content: '';
+                background-image: url('/assets/images/ic-play.svg');
+                width: 25px;
+                height: 25px;
+                background-size: contain;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+}
 .slider-video-hataco{
     .video-slider{
         width: 100%;
-        height: 379px;
+        height: 273px;
+        @include minWidth(768px){
+            height: 379px;
+        }
     }
     .play-video-slider{
         position: absolute;

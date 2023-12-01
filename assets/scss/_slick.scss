@@ -56,11 +56,10 @@
 .swiper-button-next,
 .swiper-button-prev
 {
-  background-color: $light;
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 26px;
   border-radius: 100%;
-  @include minWidth(480px) {
+  @include minWidth(576px) {
     width: 40px;
     height: 40px;
   }
