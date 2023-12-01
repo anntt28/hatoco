@@ -21,7 +21,7 @@
     <div class="header-top">
       <div class="container-fluid">
         <div class="d-flex justify-content-between align-items-center ">
-          <div class="text text-uppercase text-primary">Công ty TNHH Rezkin Việt Nam</div>
+          <div class="text text-uppercase text-primary d-md-block d-none ">Công ty TNHH Rezkin Việt Nam</div>
           <div class="feature d-flex">
             <ul class="user-f d-flex align-items-center">
               <li>
@@ -51,7 +51,7 @@
                   <span>Đăng nhập</span></a>
               </li>
             </ul>
-            <ul class="social-f d-flex">
+            <ul class="social-f d-md-flex d-none">
               <li>
                 <a href="">
                   <img src="./assets/images/ic-face.png" alt="image">
@@ -74,10 +74,13 @@
               </li>
             </ul>
           </div>
+          <a class="btn-card-mobile d-md-none d-block ">
+            <img src="/assets/images/ic-cart-mobile.svg" alt="">
+          </a>
         </div>
       </div>
     </div>
-    <div class="header-middle">
+    <div class="header-middle d-xl-block d-none">
       <div class="container-fluid">
         <div class="content-h-middle d-flex justify-content-between align-items-center ">
           <div class="logo">
@@ -140,19 +143,111 @@
       </div>
     </div>
   </header>
+  <!-- header pc -->
+  <div class="header-bottom d-xl-block d-none ">
+    <div class="container-fluid">
+      <div class="content-header-bottom d-flex align-items-center ">
+        <div class="main-menu d-flex align-items-center">
+          <div class="menu-category-product">
+            <button class="btn-cat-p dropdown-toggle d-flex align-items-center " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="icon">
+                <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_39_548)">
+                  <path d="M1.8 12H16.2C17.1941 12 18 12.6716 18 13.5C18 14.3284 17.1941 15 16.2 15H1.8C0.80592 15 0 14.3284 0 13.5C0 12.6716 0.80592 12 1.8 12Z" fill="white"/>
+                  <path d="M16.2 9H1.8C0.80592 9 0 8.3284 0 7.5C0 6.6716 0.80592 6 1.8 6H16.2C17.1941 6 18 6.6716 18 7.5C18 8.3284 17.1941 9 16.2 9Z" fill="white"/>
+                  <path d="M16.2 3H1.8C0.80592 3 0 2.3284 0 1.5C0 0.6716 0.80592 0 1.8 0H16.2C17.1941 0 18 0.6716 18 1.5C18 2.3284 17.1941 3 16.2 3Z" fill="white"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_39_548">
+                  <rect width="18" height="15" fill="white" transform="matrix(1 0 0 -1 0 15)"/>
+                  </clipPath>
+                  </defs>
+                  </svg> 
+              </div>
+              <span>Danh mục sản phẩm</span>
+              <div class="icon icon-arrow">
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.94792 7L9.36232 2.07164C9.71837 1.67414 9.69654 1.0663 9.3129 0.695354C8.9166 0.312163 8.284 0.325166 7.90378 0.72432L4.94792 3.82734L2.24451 0.771039C1.86696 0.3442 1.21585 0.301662 0.785968 0.67575C0.352398 1.05305 0.308064 1.71088 0.68709 2.14295L4.94792 7Z" fill="white"/>
+                  </svg> 
+              </div>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Gối thảo dược</a>
+              <a class="dropdown-item" href="#">Chườm mặt thảo dược</a>
+              <a class="dropdown-item" href="#"> Đai lưng thảo dược</a>
+            </div>
+          </div>
+          <nav id="site-navigation" class="primary-navigation" aria-label="Primary menu">
+            <div class="primary-menu-container">
+              <ul id="primary-menu-list" class="menu-wrapper">
+                <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6">
+                  <a href="#">Trang chủ</a>
+                </li>
+                <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
+                  <a href="#">Giới thiệu</a>
+                </li>
+                <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8">
+                  <a href="#">Sản phẩm</a>
+                </li>
+                <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9">
+                  <a href="#">Tin tức sự kiện</a>
+                </li>
+                <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
+                  <a href="#">Khách hàng</a>
+                </li>
+                <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
+                  <a href="#">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </nav>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header mobile -->
+  <div class="header-bottom-mobile d-xl-none d-flex ">
+    <div class="container-fluid ">
+      <div class="content-header-bottom-mobile d-flex align-items-center justify-content-between ">
+        <div id="btn-hamburger" class="icon-menu-mobile">
+          <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="38" height="38" stroke="#8DC540"/>
+            <path d="M9.6 11.352H30.4C31.8359 11.352 33 10.2173 33 8.81766C33 7.41801 31.8359 6.28329 30.4 6.28329H9.6C8.16411 6.28329 7 7.41801 7 8.81766C7 10.2173 8.16411 11.352 9.6 11.352Z" fill="#0D6C42"/>
+            <path d="M30.4 14.6105H9.6C8.16411 14.6105 7 15.7452 7 17.1449C7 18.5445 8.16411 19.6792 9.6 19.6792H30.4C31.8359 19.6792 33 18.5445 33 17.1449C33 15.7452 31.8359 14.6105 30.4 14.6105Z" fill="#0D6C42"/>
+            <path d="M30.4 22.9377H9.6C8.16411 22.9377 7 24.0724 7 25.472C7 26.8717 8.16411 28.0064 9.6 28.0064H30.4C31.8359 28.0064 33 26.8717 33 25.472C33 24.0724 31.8359 22.9377 30.4 22.9377Z" fill="#0D6C42"/>
+            </svg>            
+        </div>
+        <div class="logo-mobile">
+          <img src="/assets/images/logo-mobile.png" alt="logo mobile">
+        </div>
+        <div class="btn-search-m">
+          <img src="/assets/images/ic-search.svg" alt="logo mobile">
+        </div>
+      </div>
+    </div>
+  </div>
   <aside class="menu-aside-page">
     <div class="backdrop"></div>
     <div class="menu-aside px-5">
-      <div class="menu-primary-2-container" bis_skin_checked="1">
-        <ul id="primary-2-menu" class="menu">
-          <li>
-            <a href="" class="active-link">Giới thiệu</a>
+      <div class="primary-menu-container">
+        <ul id="primary-menu-list" class="menu-wrapper">
+          <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6">
+            <a href="#">Trang chủ</a>
           </li>
-          <li>
-            <div class="menu-popup" data-toggle="modal" data-target="#questionModal">Hỏi đáp</div>
+          <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
+            <a href="#">Giới thiệu</a>
           </li>
-          <li>
-            <div class="menu-popup" data-toggle="modal" data-target="#questionModal">Sáng kiến</div>
+          <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8">
+            <a href="#">Sản phẩm</a>
+          </li>
+          <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9">
+            <a href="#">Tin tức sự kiện</a>
+          </li>
+          <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
+            <a href="#">Khách hàng</a>
+          </li>
+          <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
+            <a href="#">Liên hệ</a>
           </li>
         </ul>
       </div>
@@ -164,8 +259,13 @@
   </aside>
   <main class="homepage">
     <section class="banner-top">
-      <div class="img">
+      <!-- banner pc -->
+      <div class="img d-md-block d-none ">
         <img src="./assets/images/banner-top.jpg" alt="banner">
+      </div>
+      <!-- banner mobile -->
+      <div class="img img-mobile d-md-none">
+        <img src="./assets/images/banner-mobile.jpg" alt="banner">
       </div>
     </section>
     <section class="introduce">
@@ -181,7 +281,7 @@
                   <p>  Với mong muốn mang tới cho thị trường những sản phẩm chất lượng, độc đáo, sáng tạo theo tiêu chuẩn cao, ở tất cả các sản phẩm mình tạo ra, chúng tôi đã chứng tỏ vai trò tiê dẫn dắt sự thay đổi phong cách tiêu dùng. Vì một cuộc sống khoẻ mạnh và hạnh phúc hơn!
                   </p>
                 </div>
-                <a href="" class="btn-border-rounded">Xem chi tiết 
+                <a href="" class="btn-border-rounded d-md-inline-flex d-none ">Xem chi tiết 
                   <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.62069 7.08235L2.43882 3.19841C1.99802 2.78902 1.31515 2.79203 0.87798 3.2053C0.401372 3.65586 0.401628 4.41446 0.87854 4.86469L3.22759 7.08235L0.924049 9.1395C0.431244 9.57959 0.430698 10.3504 0.922879 10.7912C1.3407 11.1654 1.97225 11.1684 2.39352 10.798L6.62069 7.08235Z" fill="#5B9E47"/>
                     <path d="M8.6069 7.08235L3.28071 2.35525C2.83759 1.96198 2.79089 1.28633 3.1757 0.83583C3.56874 0.375697 4.26183 0.324998 4.71764 0.723038L12 7.08235L4.67405 13.331C4.23756 13.7033 3.58392 13.66 3.20034 13.2334C2.80567 12.7944 2.84639 12.1175 3.29082 11.729L8.6069 7.08235Z" fill="#5B9E47"/>
@@ -193,6 +293,14 @@
           <div class="col-lg-6">
             <div class="img">
               <img src="./assets/images/illustration.png" alt="banner">
+            </div>
+            <div class="btn-read-more text-center d-md-none  ">
+              <a href="" class="btn-border-rounded ">Xem chi tiết 
+                <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.62069 7.08235L2.43882 3.19841C1.99802 2.78902 1.31515 2.79203 0.87798 3.2053C0.401372 3.65586 0.401628 4.41446 0.87854 4.86469L3.22759 7.08235L0.924049 9.1395C0.431244 9.57959 0.430698 10.3504 0.922879 10.7912C1.3407 11.1654 1.97225 11.1684 2.39352 10.798L6.62069 7.08235Z" fill="#5B9E47"/>
+                  <path d="M8.6069 7.08235L3.28071 2.35525C2.83759 1.96198 2.79089 1.28633 3.1757 0.83583C3.56874 0.375697 4.26183 0.324998 4.71764 0.723038L12 7.08235L4.67405 13.331C4.23756 13.7033 3.58392 13.66 3.20034 13.2334C2.80567 12.7944 2.84639 12.1175 3.29082 11.729L8.6069 7.08235Z" fill="#5B9E47"/>
+                  </svg>                    
+              </a>
             </div>
           </div>
         </div>
@@ -1154,6 +1262,9 @@
                 </g>
                 </svg>
             </div>
+            <div class="swiper-pagination swiper-pagination-2">
+
+            </div>
           </div>
         </div>
       </div>
@@ -1235,10 +1346,67 @@
       </div>
     </section>
     <section class="video-hataco">
-      <div class="heading-hataco text-center ">
-        <h2 class="text-uppercase">video hatoco</h2>
-        <div class="img">
-          <img src="./assets/images/bough.png" alt="line">
+      <div class="container-fluid ">
+        <div class="heading-hataco text-center ">
+          <h2 class="text-uppercase">video hatoco</h2>
+          <div class="img">
+            <img src="./assets/images/bough.png" alt="line">
+          </div>
+        </div>
+        <div class="content-video-hataco">
+          <div class="slider-video-hataco swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <video class="video-slider" height="288" controls>
+                  <source src="/assets/video/videoplayback.mp4" type="video/mp4">
+                </video>
+                <div class="img play-video-slider">
+                  <img src="/assets/images/thumb-video.jpg" alt="image">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <video class="video-slider" height="288" controls>
+                  <source src="/assets/video/videoplayback.mp4" type="video/mp4">
+                </video>
+                <div class="img play-video-slider">
+                  <img src="/assets/images/thumb-video.jpg" alt="image">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <video class="video-slider" height="288" controls>
+                  <source src="/assets/video/videoplayback.mp4" type="video/mp4">
+                </video>
+                <div class="img play-video-slider">
+                  <img src="/assets/images/thumb-video.jpg" alt="image">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <video class="video-slider" height="288" controls>
+                  <source src="/assets/video/videoplayback.mp4" type="video/mp4">
+                </video>
+                <div class="img play-video-slider">
+                  <img src="/assets/images/thumb-video.jpg" alt="image">
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper-button-prev-3">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.9">
+              <circle cx="20" cy="20" r="19" transform="matrix(-1 0 0 1 40 0)" stroke="#DADADA" stroke-width="2"/>
+              <path d="M15.2051 18.2955H29.3523C30.2623 18.2955 31 19.0332 31 19.9432C31 20.8532 30.2623 21.5909 29.3523 21.5909H15.2051L20.841 26.3369C21.5318 26.9187 21.6268 27.9477 21.054 28.6461C20.4516 29.3805 19.3552 29.4562 18.6576 28.8116L9 19.8864L18.9765 10.8737C19.5259 10.3773 20.3617 10.3768 20.9118 10.8725C21.5429 11.4413 21.5492 12.4293 20.9254 13.0061L15.2051 18.2955Z" fill="#C4C4C4"/>
+              </g>
+              </svg>              
+          </div>
+          <div class="swiper-button-next swiper-button-next-3">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.9">
+              <circle cx="20" cy="20" r="19" stroke="#DADADA" stroke-width="2"/>
+              <path d="M24.7949 18.2955H10.6477C9.73771 18.2955 9 19.0332 9 19.9432C9 20.8532 9.73771 21.5909 10.6477 21.5909H24.7949L19.159 26.3369C18.4682 26.9187 18.3732 27.9477 18.946 28.6461C19.5484 29.3805 20.6448 29.4562 21.3424 28.8116L31 19.8864L21.0235 10.8737C20.4741 10.3773 19.6383 10.3768 19.0882 10.8725C18.4571 11.4413 18.4508 12.4293 19.0746 13.0061L24.7949 18.2955Z" fill="#C4C4C4"/>
+              </g>
+              </svg>
+          </div>
         </div>
       </div>
     </section>

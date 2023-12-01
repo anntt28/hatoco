@@ -13,7 +13,6 @@ html {
     font-size: 16px;
   }
 }
-
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
   color: $grey-1;
@@ -39,9 +38,9 @@ body {
   background-color: #1d7af3 !important;
 }
 .container-fluid {
-  padding: 0 16px;
+  padding: 0 20px;
   @include minWidth(576px) {
-    padding: 0 60px;
+    padding: 0 40px;
   }
   @include minWidth(1440px) {
     padding: 0;
@@ -189,10 +188,10 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 33px;
   @include minWidth(1200px) {
-    font-size: 35px;
+    font-size: 38px;
   }
 }
 
@@ -505,10 +504,17 @@ textarea {
   }
 }
 .heading-hataco{
+  h2{
+    margin-bottom: 0;
+    @include minWidth(768px){
+      margin-bottom: 16px;
+    }
+  }
   p{
     max-width: 927px;
     margin: 0 auto;
     font-weight: 300; 
     color: $grey-light;
+    margin-top: 5px;
   }
 }
