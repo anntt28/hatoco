@@ -85,18 +85,29 @@ main{
         top: 37%;
         box-shadow: none;
     }
+    .swiper-pagination{
+        margin-top: 18px;
+    }
+    .swiper-pagination-bullet{
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+    } 
 }
 .product-hataco-slider{
     .swiper-wrapper{
         align-items: center;
     }
     .swiper-slide{
-        &.swiper-slide-next{
+        &.swiper-slide-active{
             .box-img{
-                height: 190px;
+                height: 135px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include minWidth(576px){
+                    height: 190px;
+                }
                 @include minWidth(768px){
                     height: 230px;
                 }

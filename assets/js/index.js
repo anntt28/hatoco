@@ -77,13 +77,19 @@ $(function () {
  var swiper6 = new Swiper(".product-hataco-slider", {
   initialSlide: 3,
   cssMode: false,
+  slideToClickedSlide: true,
   paginationClickable: true,
+  centeredSlides: true,
   slidesPerView: 3,
   spaceBetween: 30,
   navigation: {
    nextEl: ".swiper-button-next",
    prevEl: ".swiper-button-prev",
   },
+  pagination: {
+    el: ".swiper-pagination-3",
+    clickable: true,
+   },
   breakpoints: {
     768: {
       slidesPerView: 6,
@@ -123,6 +129,10 @@ $(function () {
    swiper: swiper8,
   },
  });
+ $('.btn-search-m button').click(function(){
+  $('.header-bottom-mobile, .btn-search-m input').toggleClass('active-search');
+  $('.btn-search-m input').focus();
+});
  $(".menu-item-has-children")
   .on("mouseover", function () {
    $(this).children(".sub-menu").addClass("active");

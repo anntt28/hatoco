@@ -10656,15 +10656,69 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   padding: 2px 20px;
 }
 
+.content-header-bottom-mobile {
+  position: relative;
+}
+
 .header-bottom-mobile {
   padding: 11px 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header-bottom-mobile .icon-menu-mobile {
   cursor: pointer;
 }
 
+.header-bottom-mobile .logo-mobile {
+  width: 113px;
+  height: 65px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.header-bottom-mobile.active-search .btn-search-m {
+  width: 200px;
+}
+
+.header-bottom-mobile.active-search .btn-search-m input, .header-bottom-mobile.active-search .btn-search-m .modal textarea, .modal .header-bottom-mobile.active-search .btn-search-m textarea, .header-bottom-mobile.active-search .btn-search-m .modal .select2-container--default .select2-selection--single, .modal .select2-container--default .header-bottom-mobile.active-search .btn-search-m .select2-selection--single {
+  width: 100%;
+  visibility: visible;
+}
+
+.header-bottom-mobile.active-search .logo-mobile {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .header-bottom-mobile .btn-search-m {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 39px;
+  text-align: right;
+}
+
+.header-bottom-mobile .btn-search-m input, .header-bottom-mobile .btn-search-m .modal textarea, .modal .header-bottom-mobile .btn-search-m textarea, .header-bottom-mobile .btn-search-m .modal .select2-container--default .select2-selection--single, .modal .select2-container--default .header-bottom-mobile .btn-search-m .select2-selection--single {
+  border-radius: 20px;
+  border: 1px solid #E1E1E1;
+  height: 39px;
+  padding: 10px;
+  width: 0;
+  margin-right: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+.header-bottom-mobile .btn-search-m button {
+  position: absolute;
+  right: 0;
   background-color: #8DC540;
   width: 39px;
   height: 39px;
@@ -10678,6 +10732,7 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
       -ms-flex-align: center;
           align-items: center;
   border-radius: 100%;
+  border: none;
 }
 
 .receive-incentives {
@@ -11510,14 +11565,24 @@ main section {
           box-shadow: none;
 }
 
+.product-hataco .swiper-pagination {
+  margin-top: 18px;
+}
+
+.product-hataco .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
+
 .product-hataco-slider .swiper-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.product-hataco-slider .swiper-slide.swiper-slide-next .box-img {
-  height: 190px;
+.product-hataco-slider .swiper-slide.swiper-slide-active .box-img {
+  height: 135px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11529,13 +11594,19 @@ main section {
           align-items: center;
 }
 
+@media (min-width: 576px) {
+  .product-hataco-slider .swiper-slide.swiper-slide-active .box-img {
+    height: 190px;
+  }
+}
+
 @media (min-width: 768px) {
-  .product-hataco-slider .swiper-slide.swiper-slide-next .box-img {
+  .product-hataco-slider .swiper-slide.swiper-slide-active .box-img {
     height: 230px;
   }
 }
 
-.product-hataco-slider .swiper-slide.swiper-slide-next .img {
+.product-hataco-slider .swiper-slide.swiper-slide-active .img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   position: relative;
@@ -11545,12 +11616,12 @@ main section {
   height: max-content;
 }
 
-.product-hataco-slider .swiper-slide.swiper-slide-next .img img {
+.product-hataco-slider .swiper-slide.swiper-slide-active .img img {
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.product-hataco-slider .swiper-slide.swiper-slide-next .img::before {
+.product-hataco-slider .swiper-slide.swiper-slide-active .img::before {
   content: '';
   position: absolute;
   top: 0;
