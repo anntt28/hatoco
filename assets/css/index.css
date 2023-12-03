@@ -11454,18 +11454,18 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   }
 }
 
-main section {
+.homepage section {
   margin-top: 41px;
 }
 
 @media (min-width: 768px) {
-  main section {
+  .homepage section {
     margin-top: 119px;
   }
 }
 
 .banner-top {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .banner-top .img-mobile {
@@ -12377,4 +12377,21 @@ main section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.breadcrumbs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.content-page-cate-pr {
+  padding-top: 39px;
+}
+
+.box-cate-pr {
+  border-radius: 20px;
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
 }

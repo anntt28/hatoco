@@ -75,12 +75,14 @@ $(function () {
   },
  });
  var swiper6 = new Swiper(".product-hataco-slider", {
-  initialSlide: 3,
   cssMode: false,
+  loopedSlides: 4, 
   slideToClickedSlide: true,
   paginationClickable: true,
   centeredSlides: true,
+  centeredSlidesBounds: true,
   slidesPerView: 3,
+  slidesPerGroup: 1,
   spaceBetween: 30,
   navigation: {
    nextEl: ".swiper-button-next",
@@ -92,8 +94,10 @@ $(function () {
    },
   breakpoints: {
     768: {
-      slidesPerView: 6,
+      slidesPerView: 6.1,
       spaceBetween: 50,
+      centeredSlides: false,
+      slidesOffsetBefore:15,
     },
   },
  });

@@ -1,4 +1,4 @@
-main{
+.homepage{
     section{
         margin-top: 41px;
         @include minWidth(768px){
@@ -7,7 +7,7 @@ main{
     }
 }
 .banner-top{
-    margin-top: 0;
+    margin-top: 0 !important;
     .img-mobile{
         height: 346px; 
         img{
