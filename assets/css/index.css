@@ -13008,11 +13008,18 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 
 .review-post {
   border-radius: 20px;
-  background: #27835A;
+  background-image: url(/assets/images/bg-review-news.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   color: #fff;
-  padding: 43px;
+  padding: 43px 30px 50px;
   margin-bottom: 62px;
+}
+
+.review-post p {
+  margin-bottom: 25px;
 }
 
 .review-post .button-review-post a {
