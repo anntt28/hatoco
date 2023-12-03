@@ -229,14 +229,16 @@
     button{
       position: absolute;
       right: 0;
-    background-color: #8DC540;
-    width: 39px;
-    height: 39px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    border: none;
+      background-color: #8DC540;
+      width: 39px;
+      height: 39px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: none;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
