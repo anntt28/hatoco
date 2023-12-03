@@ -137,6 +137,12 @@ $(function () {
   $('.header-bottom-mobile, .btn-search-m input').toggleClass('active-search');
   $('.btn-search-m input').focus();
 });
+$('.table-of-content li a').click(function(){
+  $('html, body').animate({
+      scrollTop: $( $(this).attr('href') ).offset().top -100
+  }, 'linear');
+  return false;
+});
  $(".menu-item-has-children")
   .on("mouseover", function () {
    $(this).children(".sub-menu").addClass("active");

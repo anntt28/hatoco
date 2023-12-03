@@ -9,28 +9,59 @@
         }
     }
 }
+.meta-rank{
+    padding: 10px 0px 10px 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    background: linear-gradient(0deg, #C2EA8B 14.04%, #DDFFAF 99.9%);
+    letter-spacing: 18px;
+    font-weight: 700; 
+    color: $primary;
+    display: inline-flex;
+    width: max-content;
+    @include minWidth(768px){
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        left: 0%;
+        padding: 15px 8px 0;
+        margin-bottom: 0;
+    }
+}
 .item-blog-new-spotlight{
+    position: relative;
     .box-image{
-        border-radius: 20px 20px 0 0;
+        border-radius: 20px 0px 0px 20px;
         overflow: hidden;
         @include minWidth(768px){
-            width: 650px;
+            width: 404px;
             height: 496px;
             flex-shrink: 0; 
         }
+        @include minWidth(1200px){
+            width: 650px;
+        }
         img{
             object-fit: cover;
+            height: 100%;
+            width: 100%;
         }
     }
     .box-text{
+        position: relative;
         background: linear-gradient(314deg, #0D6C42 1.48%, #8DC540 139.61%);
-        height: 496px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         color: $light;
         padding-left: 15px;
         padding-right: 15px;
+        padding-top: 50px;
+        padding-bottom: 50px;
         margin-top: -16px;
         border-radius: 0px 0px 20px 20px;
         @include minWidth(768px){
@@ -38,13 +69,16 @@
             margin-top: 0px;
             padding-left: 43px;
             padding-right: 43px;
+            height: 496px;
+            padding-top: 0px;
+            padding-bottom: 0px;
         }
         h2{
             a{
                 font-size: 22px;
                 color: $light;
                 line-height: 22px;
-                @include minWidth(768px){
+                @include minWidth(1024px){
                     font-size: 32px;
                     line-height: 47px;
                 }
@@ -64,6 +98,13 @@
         p{
             font-weight: 300;
             line-height: 30px; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 25px;
+            -webkit-line-clamp: 5;
+            max-height: 9em;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
         }
         .btn-border-rounded{
             background: transparent;
