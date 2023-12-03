@@ -2,6 +2,14 @@
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #E6E6E6;
+    font-weight: 300; 
+    a{
+        color: #6B6B6B; 
+        font-weight: 300; 
+        &:hover{
+            color: $primary;
+        }
+    }
 }
 .content-page-cate-pr{
     padding-top: 39px;
