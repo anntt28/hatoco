@@ -6,6 +6,7 @@
         margin-bottom: 33px;
         @include minWidth(768px){
             line-height: 27px;
+            font-size: 28px; 
         }
     }
 }

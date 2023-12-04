@@ -10541,15 +10541,30 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 
 .list-item-product-t {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   -moz-column-gap: 10px;
        column-gap: 10px;
+}
+@media (min-width: 480px) {
+  .list-item-product-t {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
 }
 @media (min-width: 1400px) {
   .list-item-product-t {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     -moz-column-gap: 30px;
          column-gap: 30px;
+  }
+}
+.list-item-product-t .item-best-seller:nth-child(n+3) {
+  display: none;
+}
+@media (min-width: 480px) {
+  .list-item-product-t .item-best-seller:nth-child(n+3) {
+    display: block;
   }
 }
 .list-item-product-t .item-best-seller:nth-child(n+4) {
@@ -10799,10 +10814,18 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   }
 }
 .why-choose-me .content-why-choose-me .f-1::after {
-  content: url("/assets/images/line-2.png");
+  content: url("/assets/images/line-2-sp.png");
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
+  bottom: auto;
+}
+@media (min-width: 768px) {
+  .why-choose-me .content-why-choose-me .f-1::after {
+    content: url("/assets/images/line-2.png");
+    top: auto;
+    bottom: 0;
+  }
 }
 .why-choose-me .content-why-choose-me .feature {
   flex: 1;
@@ -10822,16 +10845,16 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   }
 }
 .why-choose-me .content-why-choose-me .feature .title {
-  margin-bottom: 14px;
   flex-direction: column;
 }
 @media (min-width: 768px) {
   .why-choose-me .content-why-choose-me .feature .title {
     flex-direction: row;
+    margin-bottom: 14px;
   }
 }
 .why-choose-me .content-why-choose-me .feature .title h5 {
-  margin-left: 14px;
+  margin-top: 15px;
   color: #0D6C42;
   font-size: 20px;
   font-weight: 600;
@@ -10840,6 +10863,8 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 @media (min-width: 768px) {
   .why-choose-me .content-why-choose-me .feature .title h5 {
     font-size: 24px;
+    margin-left: 14px;
+    margin-top: 0;
   }
 }
 .why-choose-me .content-why-choose-me .feature p {
@@ -10847,12 +10872,13 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   text-align: center;
   font-size: 15px;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 25px;
 }
 @media (min-width: 768px) {
   .why-choose-me .content-why-choose-me .feature p {
     font-size: 17px;
     text-align: justify;
+    line-height: 29px;
   }
 }
 
@@ -11557,6 +11583,7 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 @media (min-width: 768px) {
   .post-info .entry-title {
     line-height: 27px;
+    font-size: 28px;
   }
 }
 

@@ -6,7 +6,7 @@ $(function () {
  var swiper2 = new Swiper(".product-category-h .slider-tab-p", {
   loop: true,
   loopedSlides: 1,
-  slidesPerView: 3,
+  slidesPerView: 2,
   slidesPerGroup: 1,
   spaceBetween: 1,
   freeMode: true,
@@ -18,6 +18,10 @@ $(function () {
    prevEl: ".swiper-button-prev-1",
   },
   breakpoints: {
+    470: {
+      slidesPerView: 3,
+      spaceBetween: 1,
+    },
     768: {
       slidesPerView: 7,
       spaceBetween: 1,
