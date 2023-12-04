@@ -137,6 +137,9 @@ $(function () {
   $('.header-bottom-mobile, .btn-search-m input').toggleClass('active-search');
   $('.btn-search-m input').focus();
 });
+$('.box-menu-content-news h4').click(function(){
+  $('.box-menu-content-news').toggleClass('active');
+});
 $('.table-of-content li a').click(function(){
   $('html, body').animate({
       scrollTop: $( $(this).attr('href') ).offset().top -100
