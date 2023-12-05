@@ -673,8 +673,8 @@
       </div>
       <div class="col-lg-4">
        <div class="sidebar-news">
-        <div class="box-menu-content-news">
-         <h4 class="d-flex">
+        <div class="box-menu-content-news dropdown show">
+         <button class="d-flex dropdown-toggle" type="button" data-toggle="dropdown">
           <div class="icon">
            <svg
             width="32"
@@ -731,17 +731,25 @@
             />
            </svg>
           </div>
-         </h4>
-         <ul>
+         </button>
+         <ul class="dropdown-menu show">
           <li>
            <a href=""
-            >Gối thảo dược, túi chườm nóng thảo dược có lịch sử thế nào?</a
+            ><div class="btn-open">
+              <img src="/assets/images/ic-down.svg" alt="">
+            </div>Gối thảo dược, túi chườm nóng thảo dược có lịch sử thế nào?</a
            >
           </li>
-          <li>
-           <a href=""
-            >Gối thảo dược, túi chườm nóng thảo dược có lịch sử thế nào?</a
+          <li  class="dropdown-submenu">
+           <a class="sub-m" tabindex="-1" href=""
+            ><div class="btn-open">
+              <img src="/assets/images/ic-down.svg" alt=""></div>Gối thảo dược, túi chườm nóng thảo dược có lịch sử thế nào?</a
            >
+           <ul class="dropdown-menu-no-child">
+              <li><a tabindex="-1" href="#">2nd level dropdown</a>
+              </li>
+              <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+           </ul>
           </li>
           <li>
            <a href=""

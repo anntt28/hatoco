@@ -120,6 +120,7 @@
     .menu-category-product{
       margin-right: 50px;
       width: 302px;
+      position: relative;
       &.show{
         .icon-arrow{
           svg{
@@ -131,6 +132,8 @@
         width: 310px;
         border-radius: 0;
         padding: 0;
+        transform: none !important;
+        top: 100% !important;
         .dropdown-item{
           padding: 15px 20px;
           border-top: 1px solid #ddd;

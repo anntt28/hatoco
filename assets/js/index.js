@@ -23,6 +23,10 @@ $(function () {
       spaceBetween: 1,
     },
     768: {
+      slidesPerView: 5,
+      spaceBetween: 1,
+    },
+    1200: {
       slidesPerView: 7,
       spaceBetween: 1,
     },
@@ -98,10 +102,13 @@ $(function () {
    },
   breakpoints: {
     768: {
-      slidesPerView: 6.1,
-      spaceBetween: 50,
+      slidesPerView: 4.1,
       centeredSlides: false,
       slidesOffsetBefore:15,
+    },
+    1200:{
+      slidesPerView: 6.1,
+      spaceBetween: 50,
     },
   },
  });
@@ -137,13 +144,19 @@ $(function () {
    swiper: swiper8,
   },
  });
+ $('.dropdown-submenu .sub-m .btn-open').on("click", function(e){
+  $(this).parent('.sub-m').next('ul').toggle();
+  $(this).toggleClass('active')
+  e.stopPropagation();
+  e.preventDefault();
+});
  $('.btn-search-m button').click(function(){
   $('.header-bottom-mobile, .btn-search-m input').toggleClass('active-search');
   $('.btn-search-m input').focus();
 });
-$('.box-menu-content-news h4').click(function(){
-  $('.box-menu-content-news').toggleClass('active');
-});
+// $('.box-menu-content-news h4').click(function(){
+//   $('.box-menu-content-news').toggleClass('active');
+// });
 $('.table-of-content li a').click(function(){
   $('html, body').animate({
       scrollTop: $( $(this).attr('href') ).offset().top -100

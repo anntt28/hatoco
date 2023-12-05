@@ -53,7 +53,7 @@
 }
 .review-post{
     border-radius: 20px;
-    background-image: url(/assets/images/bg-review-news.png);
+    background-image: url(../images/bg-review-news.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; 
@@ -90,11 +90,8 @@
     }
 }
 .box-menu-content-news{
-    border-radius: 10px;
-    border: 2px solid #8DC540;
-    background: #FFF;
-    transition: all 0.5 ease-in-out;
     &.active{
+        border-bottom: none;
         h4{
             border-bottom: 0px solid #E6E6E6;
         }
@@ -103,22 +100,65 @@
             display: none;
         }
     }
-    h4{
+    &.show{
+        border-bottom: none;
+        border-radius: 20px 20px 0px 0px;
+        button{
+            border-bottom: 1px solid #E6E6E6;
+            border-radius: 20px 20px 0px 0px;
+        }
+    }
+    button{
+        border-top: 2px solid #8DC540;
+        border-left: 2px solid #8DC540;
+        border-right: 2px solid #8DC540;
         cursor: pointer;
         padding: 16px 27px;
-        border-bottom: 1px solid #E6E6E6;
+        border-bottom: 2px solid #8DC540;
         color: #27835A;
         text-align: justify;
         font-size: 20px;
         font-weight: 600;
         line-height: 30px;
+        width: 100%;
+        background: transparent;
         position: relative;
+        border-radius: 20px;
+        &::after{
+            border: none;
+        }
         .icon{
             margin-right: 20px;
         }
         .icon-arrow{
             position: absolute;
             right: 16px;
+        }
+    }
+    .dropdown-menu{
+        margin: 0 0px 30px;
+        border-radius: 0px 0 20px 20px;
+        z-index: 9;
+        width: 100%;
+        .dropdown-submenu{
+            ul{
+                padding-bottom: 0;
+            }
+        }
+        &.show{
+            position: relative !important;
+            transform: none !important;
+            border: 2px solid #8DC540;
+            border-top: 0;
+        }
+        .dropdown-menu-no-child{
+            li{
+                a{
+                    &::before{
+                        background-image: none;
+                    }
+                }
+            }
         }
     }
     ul{
@@ -138,20 +178,16 @@
             }
             a{
                 display: inline;
-                position: relative;
                 color: #27835A;
                 font-weight: 500;
                 line-height: 30px;
-                &::before{
-                    content: "";
-                    background-image: url(/assets/images/ic-down.svg);
-                    background-repeat: no-repeat;
-                    width: 9px;
-                    height: 12px;
+                .btn-open{
                     position: absolute;
-                    background-size: contain;
-                    left: -37px;
-                    top: 7px;
+                    left: 15px;
+                    top: -1px;
+                    &.active{
+                        transform: rotate(180deg);
+                    }
                 }
             }
         }
