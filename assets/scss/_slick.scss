@@ -72,6 +72,9 @@
     left: -15px;
   }
   @include minWidth(820px) {
+    left: -39px;
+  }
+  @include minWidth(1500px) {
     left: -55px;
   }
 }
@@ -82,6 +85,9 @@
     right: -15px;
   }
   @include minWidth(820px) {
+    right: -39px;
+  }
+  @include minWidth(1500px) {
     right: -55px;
   }
 }

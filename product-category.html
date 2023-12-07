@@ -309,6 +309,23 @@
                   </div>
                 </div>
                 <div class="filter">
+                  <form class="woocommerce-ordering" method="get">
+                    <p>Sắp xếp theo:</p>
+                    <input type="radio" id="latest" name="sort" value="latest">
+                    <label for="date">Mới nhất</label><br>
+                    <input type="radio" id="total-sales" name="sort" value="total-sales" checked="">
+                    <label for="seller">Bán chạy</label><br>
+                    
+                    <div class="custom-select-h">
+                      <select name="orderBy" class="orderBy" aria-label="Đơn hàng của cửa hàng" fdprocessedid="djngd7">
+                                <option value="price" selected="">Thứ tự theo giá: thấp đến cao</option>
+                                <option value="price-desc">Thứ tự theo giá: cao xuống thấp</option>
+                            </select>
+                    </div>
+                    <input type="hidden" name="paged" value="1">
+                    </form>
+                </div>
+                <div class="filter d-none ">
                   <form>
                     <p>Sắp xếp theo:</p>
                     <button class="active">

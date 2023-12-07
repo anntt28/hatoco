@@ -106,7 +106,7 @@
                 justify-content: center;
                 align-items: center;
                 @include minWidth(576px){
-                    height: 190px;
+                    height: 220px;
                 }
                 @include minWidth(768px){
                     height: 230px;
@@ -146,7 +146,6 @@
             font-weight: 600;
             line-height: 27px;
             text-transform: uppercase; 
-            max-width: 101px;
             margin: 0 auto;
         }
     }
@@ -178,7 +177,9 @@
     column-gap:10px;
     @include minWidth(480px){
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        column-gap:30px;
+    }
+    @include minWidth(576px){
+        column-gap:20px;
     }
     @include minWidth(1400px){
         grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -193,7 +194,7 @@
         }
         &:nth-child(n+4){
             display: none;
-            @include minWidth(768px){
+            @include minWidth(1400px){
                 display: block;
             }
         }
@@ -216,6 +217,8 @@
         .img{
             height: 131px; 
             display: block;
+            border-radius: 20px 20px 0px 0px;
+            overflow: hidden;
             @include minWidth(768px){
                 height: 230px;
             }
@@ -317,6 +320,7 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     cursor: pointer;
+                    padding: 5px;
                     @include minWidth(768px){
                         padding: 6px 22px;
                     }
@@ -432,12 +436,16 @@
                 padding-right: 60px;
             }
             &::after{
-                content: url("../images/line-2-sp.png");
+                content: "";
+                background-image: url("../images/line-2-sp.png");
+                height: 100%;
+                width: 10px;
                 position: absolute;
                 right: 0;
                 top: 0;
                 bottom: auto;
-                @include minWidth(768px){
+                background-repeat: no-repeat;
+                @include minWidth(992px){
                     content: url("../images/line-2.png");
                     top: auto;
                     bottom: 0;
@@ -453,7 +461,7 @@
                     padding-left: 60px;
                 }
             }
-            @include minWidth(768px){
+            @include minWidth(992px){
                 padding-left: 60px;
             }
             .title{
@@ -613,6 +621,7 @@
         padding: 6px;
         .box-image{
             padding-top: 72%;
+            border-radius: 20px 20px 0px 0px;
             @include minWidth(768px){
                 padding-top: 71%;
             }

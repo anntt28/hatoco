@@ -48,7 +48,7 @@
     .wpcf7-submit{
       position: absolute;
       right: 19px;
-      top: 46%;
+      top: 22px;
       background-color: transparent;
       text-indent: -9999px;
       background-image: url(../images/ic-plane.svg);
@@ -57,6 +57,17 @@
       white-space: nowrap;
       border: none;
       transform: translateY(-50%);
+    }
+    .wpcf7-spinner{
+      position: absolute;
+      right: 23px;
+      top: 20%;
+      @include minWidth(768px){
+        right: -50px;
+      }
+    }
+    .wpcf7-not-valid-tip{
+      margin-top: 5px;
     }
   }
 }
@@ -125,11 +136,14 @@
     list-style-type: circle;
     li{
       color: #8DC540;
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 300;
       line-height: 40px;
       list-style-type: disc;
       list-style-position: inside;
+      @include minWidth(576px){
+        font-size: 15px;
+      }
     }
   }
   .maps{
@@ -155,9 +169,12 @@
   }
   .text{
     color: #868686;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 30px;
+    @include minWidth(768px){
+      font-size: 16px;
+    }
   }
 }
 .title-ft{

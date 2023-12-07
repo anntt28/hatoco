@@ -8,7 +8,7 @@ $(function () {
   loopedSlides: 1,
   slidesPerView: 2,
   slidesPerGroup: 1,
-  spaceBetween: 1,
+  spaceBetween: 5,
   freeMode: true,
   watchSlidesProgress: true,
   spaceBetween: 10,
@@ -20,15 +20,15 @@ $(function () {
   breakpoints: {
     470: {
       slidesPerView: 3,
-      spaceBetween: 1,
+      spaceBetween: 8,
     },
     768: {
       slidesPerView: 5,
-      spaceBetween: 1,
+      spaceBetween: 8,
     },
     1200: {
       slidesPerView: 7,
-      spaceBetween: 1,
+      spaceBetween: 8,
     },
   },
  });
@@ -144,6 +144,9 @@ $(function () {
    swiper: swiper8,
   },
  });
+ $('.content-page-cate-pr .woocommerce-ordering input[type="radio"]').each(function(index) {
+  $(this).next('label').addBack().wrapAll("<div class='button-box'></div>");
+});
  $('.dropdown-submenu .sub-m .btn-open').on("click", function(e){
   $(this).parent('.sub-m').next('ul').toggle();
   $(this).toggleClass('active')
@@ -196,19 +199,6 @@ $('.table-of-content li a').click(function(){
    $(".menu-aside-page .sub-menu").hide();
   }
  );
-
- $("#groupForm").select2({
-  minimumResultsForSearch: -1,
-  placeholder: "Select",
-  dropdownParent: $("form"),
- });
-
- $("#topicForm").select2({
-  minimumResultsForSearch: -1,
-  placeholder: "Select",
-  dropdownParent: $("form"),
- });
-
  $(".item__guide").on("click", function () {
   $("body").addClass("overflow-hidden");
   $("#guideModal").addClass("show");
