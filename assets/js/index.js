@@ -144,6 +144,28 @@ $(function () {
    swiper: swiper8,
   },
  });
+ var swiper10 = new Swiper(".product-gallery-h .slider-thumb-child", {
+  loop:false,
+  slidesPerView: 4,
+  slidesPerGroup: 1,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next-6",
+    prevEl: ".swiper-button-prev-6",
+   },
+ });
+ var swiper11 = new Swiper(".product-gallery-h .slider-images-main", {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 24,
+  thumbs: {
+   swiper: swiper10,
+  },
+ });
+
  $('.content-page-cate-pr .woocommerce-ordering input[type="radio"]').each(function(index) {
   $(this).next('label').addBack().wrapAll("<div class='button-box'></div>");
 });

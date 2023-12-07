@@ -12055,3 +12055,100 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   width: 12%;
   height: 2px;
 }
+
+.content-page-detail-pr {
+  margin-top: 47px;
+}
+
+.product-gallery-h .box-slider-w {
+  position: relative;
+  margin-top: 20px;
+}
+.product-gallery-h .slider-images-main .img {
+  height: 635px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.product-gallery-h .slider-thumb-child .img {
+  height: 143px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.product-info {
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
+  padding: 35px 42px;
+}
+.product-info h1 {
+  color: #0D6C42;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 42px;
+  margin-bottom: 0px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.product-info .price {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+}
+.product-info .price del {
+  color: #929292;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 42px;
+  text-decoration-line: strikethrough;
+}
+.product-info .price ins {
+  color: #F54343;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 42px;
+  text-decoration: none;
+  margin-right: 30px;
+}
+.product-info .list-meta-product {
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+  padding: 24px 0;
+}
+.product-info .list-meta-product li {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #8DC540;
+}
+.product-info .list-meta-product li span {
+  color: #565656;
+  line-height: 35px;
+}
+.product-info .list-meta-product li span:last-child {
+  font-weight: 300;
+}
+.product-info .cart {
+  border-bottom: 1px solid #DCDCDC;
+  padding: 38px 0;
+  display: flex;
+}
+.product-info .cart .quantity {
+  margin-right: 25px;
+}
+.product-info .cart input, .product-info .cart .modal textarea, .modal .product-info .cart textarea, .product-info .cart .modal .select2-container--default .select2-selection--single, .modal .select2-container--default .product-info .cart .select2-selection--single {
+  width: 69px;
+  border-radius: 50px;
+  border: 1px solid #ECECEC;
+  background: #FFF;
+  height: 49px;
+  padding: 15px 10px;
+  outline: none;
+}
+.product-info .cart input[type=number]::-webkit-inner-spin-button, .product-info .cart .modal textarea[type=number]::-webkit-inner-spin-button, .modal .product-info .cart textarea[type=number]::-webkit-inner-spin-button, .product-info .cart .modal .select2-container--default [type=number].select2-selection--single::-webkit-inner-spin-button, .modal .select2-container--default .product-info .cart [type=number].select2-selection--single::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.product-info .cart input[type=number]::-webkit-outer-spin-button, .product-info .cart .modal textarea[type=number]::-webkit-outer-spin-button, .modal .product-info .cart textarea[type=number]::-webkit-outer-spin-button, .product-info .cart .modal .select2-container--default [type=number].select2-selection--single::-webkit-outer-spin-button, .modal .select2-container--default .product-info .cart [type=number].select2-selection--single::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
