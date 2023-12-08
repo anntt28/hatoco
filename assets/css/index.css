@@ -12338,11 +12338,14 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   right: -19px;
 }
 
+.rank-and-review {
+  margin-bottom: 63px;
+}
+
 .content-rank-and-view {
   border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
-  overflow: hidden;
   padding: 39px 58px;
 }
 .content-rank-and-view h5 {
@@ -12354,5 +12357,137 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
   text-align: justify;
   font-size: 20px;
   font-weight: 600;
-  line-height: 30px; /* 150% */
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+}
+.progress-wrap .percent {
+  font-size: 12px;
+  color: #212121;
+}
+
+.h-review-progress {
+  width: 138px;
+  height: 12px;
+  position: relative;
+}
+.h-review-progress .bg {
+  background: #eff0f5;
+}
+.h-review-progress .bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.h-review-progress .fg {
+  background: #faca51;
+}
+
+.box-average {
+  padding-bottom: 24px;
+}
+.box-average .summary-h {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 50px;
+}
+.box-average .summary-h .score-average-h {
+  font-size: 48px;
+  color: #212121;
+}
+.box-average .summary-h .score-max-h {
+  font-size: 32px;
+  color: #9e9e9e;
+  text-align: center;
+  line-height: 40px;
+}
+.box-average .summary-h .star-container {
+  margin-bottom: 5px;
+}
+.box-average .summary-h .star-container .icon {
+  padding-right: 4px;
+}
+.box-average .summary-h .star-container .icon svg {
+  width: 33px;
+  height: 33px;
+}
+.box-average .detail {
+  display: inline-block;
+  vertical-align: middle;
+}
+.box-average .detail li {
+  display: flex;
+  align-items: center;
+}
+.box-average .detail li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.box-average .detail li .icon {
+  margin-right: 3px;
+}
+.box-average .h-review-progress {
+  margin: 0 15px;
+}
+
+.icon svg path {
+  fill: #d7d7d7;
+}
+.icon.star-yellow svg path {
+  fill: #ffbf00;
+}
+
+.star-container {
+  display: flex;
+}
+
+.filter-sort {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eff0f5;
+  border-bottom: 1px solid #eff0f5;
+}
+.filter-sort .title {
+  padding: 15px 0px;
+}
+
+.list-filter-sort {
+  display: flex;
+  align-items: center;
+}
+.list-filter-sort li {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #eff0f5;
+  padding: 15px 25px;
+}
+.list-filter-sort li p {
+  margin-bottom: 0;
+  font-weight: 300;
+  margin-right: 3px;
+}
+.list-filter-sort li svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  fill: #757575;
+}
+.list-filter-sort li .dropdown {
+  margin-top: 1px;
+}
+.list-filter-sort li .dropdown button {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-weight: 400;
+  padding: 0 2px;
+}
+.list-filter-sort li .dropdown button::after {
+  border: none;
 }
