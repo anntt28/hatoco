@@ -435,3 +435,107 @@
         }
     }
 }
+.list-comment{
+    .mod-reviews{
+        .top{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .review-image{
+            padding-top: 16px;
+            padding-bottom: 8px;
+            .list-image{
+                display: flex;
+                .img{
+                    margin-right: 10px;
+                    width: 90px;
+                    height: 90px;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .bottom{
+        margin-top: 10px;
+        .left{
+            img{
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .dropdown{
+            button{
+                text-align: right;
+                width: max-content;
+                height: max-content;
+                padding: 0;
+                &::after{
+                    border: none;
+                }
+            }
+            svg{
+                width: 16px;
+                height: 14px;
+            }
+        }
+    }
+    .btn-feature{
+        display: flex;
+        margin-top: 30px;
+        .btn-f{
+            border-radius: 50px; 
+            width: 381px;
+            height: 51px;
+            flex-shrink: 0; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            color: $light;
+            transition: all 0.3s;
+            &:hover{
+                opacity: 0.8;
+            }
+            img{
+                margin-right: 10px;
+            }
+        }
+        .btn-primary{
+            &:hover{
+                background-color: $primary;
+            }
+        }
+        .btn-green{
+            background: #78B640; 
+            span{
+                &.hidden-review{
+                    display: none;
+                }
+            }
+            &.active{
+                span{
+                    &.hidden-review{
+                        display: block;
+                    }
+                    &.write-review{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.comment-h{
+    display: none;
+    .comment-form-comment{
+        margin-top: 10px;
+        label{
+            width: 100%;
+        }
+    }
+}

@@ -193,8 +193,14 @@ $(function () {
  $('.content-page-cate-pr .woocommerce-ordering input[type="radio"]').each(function(index) {
   $(this).next('label').addBack().wrapAll("<div class='button-box'></div>");
 });
- $('.dropdown-submenu .sub-m .btn-open').on("click", function(e){
+$('.dropdown-submenu .sub-m .btn-open').on("click", function(e){
   $(this).parent('.sub-m').next('ul').toggle();
+  $(this).toggleClass('active')
+  e.stopPropagation();
+  e.preventDefault();
+});
+ $('.btn-feature .btn-green').on("click", function(e){
+  $(this).parents('.mod-reviews').find('.comment-h').toggle('active');
   $(this).toggleClass('active')
   e.stopPropagation();
   e.preventDefault();
