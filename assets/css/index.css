@@ -12058,11 +12058,18 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 
 .content-page-detail-pr {
   margin-top: 47px;
+  margin-bottom: 49px;
 }
 
 .product-gallery-h .box-slider-w {
   position: relative;
   margin-top: 20px;
+}
+.product-gallery-h .box-slider-w .swiper-button-prev {
+  left: -19px;
+}
+.product-gallery-h .box-slider-w .swiper-button-next {
+  right: -19px;
 }
 .product-gallery-h .slider-images-main .img {
   height: 635px;
@@ -12137,13 +12144,16 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 .product-info .cart .quantity {
   margin-right: 25px;
 }
+.product-info .cart .quantity label {
+  margin-right: 12px;
+}
 .product-info .cart input, .product-info .cart .modal textarea, .modal .product-info .cart textarea, .product-info .cart .modal .select2-container--default .select2-selection--single, .modal .select2-container--default .product-info .cart .select2-selection--single {
   width: 69px;
   border-radius: 50px;
   border: 1px solid #ECECEC;
   background: #FFF;
   height: 49px;
-  padding: 15px 10px;
+  padding: 15px;
   outline: none;
 }
 .product-info .cart input[type=number]::-webkit-inner-spin-button, .product-info .cart .modal textarea[type=number]::-webkit-inner-spin-button, .modal .product-info .cart textarea[type=number]::-webkit-inner-spin-button, .product-info .cart .modal .select2-container--default [type=number].select2-selection--single::-webkit-inner-spin-button, .modal .select2-container--default .product-info .cart [type=number].select2-selection--single::-webkit-inner-spin-button {
@@ -12151,4 +12161,198 @@ input::placeholder, .modal textarea::placeholder, .modal .select2-container--def
 }
 .product-info .cart input[type=number]::-webkit-outer-spin-button, .product-info .cart .modal textarea[type=number]::-webkit-outer-spin-button, .modal .product-info .cart textarea[type=number]::-webkit-outer-spin-button, .product-info .cart .modal .select2-container--default [type=number].select2-selection--single::-webkit-outer-spin-button, .modal .select2-container--default .product-info .cart [type=number].select2-selection--single::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+.product-info .cart button[type=submit] {
+  border-radius: 50px;
+  background: linear-gradient(90deg, #0D6C42 0%, #8DC540 109.81%);
+  color: #fff;
+  border: none;
+  padding: 0 22px 0 32px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.product-info .cart button[type=submit]::after {
+  content: "";
+  background-image: url(../images/ic-cart-no-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 31px;
+  height: 38px;
+  display: block;
+  margin-left: 15px;
+}
+.product-info .cart button[type=submit]:hover {
+  opacity: 0.8;
+}
+.product-info .discount-box {
+  margin-top: 34px;
+}
+.product-info .discount-box h5 {
+  color: #F54343;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.product-info .discount-box p {
+  border-radius: 20px;
+  border: 1px solid #0D6C42;
+  background: #FFF;
+  font-weight: 400;
+  color: #0D6C42;
+  padding: 10px 26px;
+}
+.product-info .discount-box p strong {
+  color: #F54343;
+  font-weight: 600;
+}
+.product-info .discount-box p:last-child {
+  margin-bottom: 0;
+}
+
+.content-detail-info-pr {
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
+  padding: 42px 57px;
+}
+.content-detail-info-pr .title-ft {
+  margin-bottom: 38px;
+}
+
+.box-content-infomation .des {
+  width: 81%;
+}
+.box-content-infomation .des h2 {
+  font-size: 30px;
+}
+.box-content-infomation .des h3 {
+  font-size: 20px;
+}
+.box-content-infomation .des .table-of-content {
+  margin-bottom: 10px;
+}
+.box-content-infomation .menu {
+  width: 19%;
+}
+
+.detail-infomation-pr {
+  margin-bottom: 30px;
+}
+
+.box-content-q-and-a {
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+.box-content-q-and-a h5 {
+  color: #27835A;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px; /* 120.833% */
+  letter-spacing: -0.48px;
+  padding: 21px 46px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #E7E7E7;
+}
+.box-content-q-and-a .card {
+  border: none;
+}
+.box-content-q-and-a .item-card-a:not(:last-child) {
+  border-bottom: 1px solid #E7E7E7;
+}
+.box-content-q-and-a .card-header {
+  padding: 21px 46px;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: none;
+}
+.box-content-q-and-a .card-header a {
+  margin-bottom: 0;
+  color: #474747;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.box-content-q-and-a .card-header a::before {
+  content: "";
+  background-image: url(../images/ic-question.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 22px;
+  height: 22px;
+  display: block;
+  margin-right: 15px;
+}
+.box-content-q-and-a .card-header::after {
+  content: "";
+  background-image: url(../images/ic-down-grey.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 7px;
+  height: 10px;
+  display: block;
+  margin-left: 15px;
+}
+.box-content-q-and-a .card-body {
+  padding: 0 46px;
+}
+
+.questions-and-answers {
+  margin-bottom: 30px;
+}
+
+.another-products {
+  margin-bottom: 77px;
+}
+
+.box-slider-product-child {
+  position: relative;
+}
+.box-slider-product-child .slider-product-child-a {
+  padding: 6px;
+}
+.box-slider-product-child .slider-product-child-a .img {
+  padding-top: 96%;
+}
+.box-slider-product-child .slider-product-child-a .item-best-seller {
+  margin-top: 12px;
+}
+.box-slider-product-child .swiper-button-prev {
+  left: -19px;
+}
+.box-slider-product-child .swiper-button-next {
+  right: -19px;
+}
+
+.content-rank-and-view {
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  padding: 39px 58px;
+}
+.content-rank-and-view h5 {
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid #E7E7E7;
+  background: #F5F5F5;
+  color: #333;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
 }

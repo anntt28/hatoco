@@ -146,7 +146,7 @@ $(function () {
  });
  var swiper10 = new Swiper(".product-gallery-h .slider-thumb-child", {
   loop:false,
-  slidesPerView: 4,
+  slidesPerView: 3,
   slidesPerGroup: 1,
   freeMode: true,
   watchSlidesVisibility: true,
@@ -156,6 +156,12 @@ $(function () {
     nextEl: ".swiper-button-next-6",
     prevEl: ".swiper-button-prev-6",
    },
+   breakpoints: {
+    1200:{
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
  });
  var swiper11 = new Swiper(".product-gallery-h .slider-images-main", {
   slidesPerView: 1,
@@ -165,7 +171,25 @@ $(function () {
    swiper: swiper10,
   },
  });
-
+ var swiper12 = new Swiper(".slider-product-child-a", {
+  slidesPerView: 2,
+  slidesPerGroup: 1,
+  spaceBetween: 15,
+  navigation: {
+   nextEl: ".swiper-button-next-7",
+   prevEl: ".swiper-button-prev-7",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+    1200:{
+      slidesPerView: 5,
+      spaceBetween: 25,
+    },
+  },
+ });
  $('.content-page-cate-pr .woocommerce-ordering input[type="radio"]').each(function(index) {
   $(this).next('label').addBack().wrapAll("<div class='button-box'></div>");
 });
